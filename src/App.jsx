@@ -1,3 +1,12 @@
+const Hello = (props) => {
+  console.log(props);
+  return (
+    <div>
+      <p>Hello {props.name}! How are you today?</p>
+    </div>
+  );
+};
+
 const App = () => {
   const course = "Half Stack application development";
   const part1 = "Fundamentals of React";
@@ -6,6 +15,8 @@ const App = () => {
   const exercises2 = 7;
   const part3 = "State of a component";
   const exercises3 = 14;
+
+  const name = "Lemi";
 
   return (
     <div>
@@ -20,6 +31,8 @@ const App = () => {
         {part3} {exercises3}
       </p>
       <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+
+      <Hello name={name} />
     </div>
   );
 };
